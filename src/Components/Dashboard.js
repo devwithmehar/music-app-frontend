@@ -1,7 +1,5 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import useAuth from "../useAuth"
-import Player from "./Player"
-import { Container, Form } from "react-bootstrap"
 import SpotifyWebApi from "spotify-web-api-node";
 import Aside from "./Aside";
 import PlaySongModal from './Songs/PlaySongModal';
@@ -42,7 +40,7 @@ export default function Dashboard({ code }) {
 
         fetchTracks();
 
-    },[searchResults]);
+    },[searchResults,accessToken]);
     
     
     useEffect(() => { 
