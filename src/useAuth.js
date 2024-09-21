@@ -17,7 +17,6 @@ export default function useAuth(code) {
         code,
       })
       .then(res => {
-        console.log(res.data);
           if(isMount && res.status === 200){
             setAccessToken(res.data.access_token)
             setRefreshToken(res.data.refresh_token)
