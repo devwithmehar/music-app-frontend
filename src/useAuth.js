@@ -17,6 +17,7 @@ export default function useAuth(code) {
         code,
       })
       .then(res => {
+        console.log(res.data);
           if(isMount && res.status === 200){
             setAccessToken(res.data.access_token)
             setRefreshToken(res.data.refresh_token)
@@ -26,7 +27,7 @@ export default function useAuth(code) {
       })
       .catch(() => {
         
-        window.location = "/"
+         window.location = "/"
       })
      
 
