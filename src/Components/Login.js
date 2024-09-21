@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 
 const url = process.env.REACT_APP_SERVER_URL + "/login";
 
-console.log(url);
 
 
 export default function Login() {
