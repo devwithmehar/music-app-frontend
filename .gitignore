@@ -1,10 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Ignore Amplify backend and cloud configuration details
-amplify/#current-cloud-backend/
-amplify/.config/
-amplify/backend/
-amplify/team-provider-info.json
 
 
 # dependencies
@@ -49,4 +45,8 @@ amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
 **.sample
+team-provider-info.json
 #amplify-do-not-edit-end
+
+
+.env
