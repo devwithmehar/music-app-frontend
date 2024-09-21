@@ -5,6 +5,7 @@ import amplifyconfig from './amplifyconfiguration.json';
 import Header from "./Components/Header";
 import Dashboard from "./Components/Dashboard";
 import Login from "./Components/Login";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 Amplify.configure(amplifyconfig);
@@ -14,10 +15,13 @@ const code = new URLSearchParams(window.location.search).get("code")
 function App() {
     
     return (
-        <>
+        <Router>
         <Header />
-        {code ? <Dashboard code={code} /> : <Login />}
-        </>
+        <Routes>
+        <Route path="/" element={code ? <Dashboard code={code} /> : <Login />} />
+          <Route path="/callback" element={<Dashboard code={code} />} />
+        </Routes>
+        </Router>
     );
   
 }
