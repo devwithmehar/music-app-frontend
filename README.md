@@ -50,3 +50,7 @@ Spotify Backend Repository
 
 
 You can follow the instructions in the backend repository to set it up and run it.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
